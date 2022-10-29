@@ -1,0 +1,24 @@
+service: maxday-rust-test
+
+provider:
+  name: aws
+  runtime: provided.al2
+  region: sa-east-1
+
+package:
+  exclude:
+    - ./**
+  include:
+    - ./bootstrap
+
+functions:
+  hello-rust:
+    handler: bootstrap
+    events:
+      - http:
+          path: /pizza/{pizza_name}/price
+          method: get
+          request:
+            parameters:
+              paths:
+                pizza_name: true

@@ -1,0 +1,12 @@
+<<<<<<< HEAD
+.DS_Store
+
+target
+
+.serverless
+build.sh
+Dockerfile
+bootstrap
+=======
+target/
+>>>>>>> 829e1d9 (Add target folder to .gitignore)
